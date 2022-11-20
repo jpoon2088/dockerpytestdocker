@@ -10,7 +10,7 @@ docker stop $dockerruntimename && docker rm $dockerruntimename
 
 if [ -d "$dockervolumemountpath" ]; then
   echo "$dockervolumepath exists, checkout main branch..."
-  cd $dockervolumemountpath && git checkout $branchname
+  cd $dockervolumemountpath && git checkout $branchname && git pull
   cd ..
   echo "done! - 1"
 else
